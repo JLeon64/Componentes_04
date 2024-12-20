@@ -1,0 +1,85 @@
+a {
+  text-decoration: none;
+}
+
+.custom-card {
+  flex-grow: 1;
+  position: relative;
+  min-width: 290px;
+  /* width: 500px; */
+  height: 140px;
+  background-color: var(--light-color);
+  border-radius: 8px;
+  padding: 24px;
+  margin: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.35s ease-in;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card::before {
+  content: "";
+  position: absolute;
+  border-radius: 8px;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: #00a3e2;
+  z-index: -1;
+  transition: 0.35s ease-in;
+}
+
+.custom-card:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--secondary-color);
+  margin-bottom: 8px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: var(--secondary-color);
+  line-height: 1.5;
+}
+
+.arrowSlot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%);
+  transition: 0.35s ease-out;
+}
+
+.arrow {
+  font-size: 30px;
+  color: var(--secondary-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.custom-card:hover .arrowSlot {
+  transform: translateX(0); 
+}
+
+.custom-card:hover .arrow {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+
+}

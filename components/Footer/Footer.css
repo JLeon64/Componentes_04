@@ -1,0 +1,19 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary-color);
+  height: 5vh;
+  transition: 0.3s;
+  border-top: 2px solid var(--secondary-color);
+
+  p {
+    color: var(--primary-color);
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    width: 100%;
+  }
+}
